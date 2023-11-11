@@ -88,6 +88,7 @@
         <gherkin.version>27.0.0</gherkin.version>
         <rest-assured.version>5.3.2</rest-assured.version>
         <io.fabric8.kubernetes-client.version>6.9.2</io.fabric8.kubernetes-client.version>
+        <apache.poi.version>5.2.4</apache.poi.version>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -229,6 +230,16 @@
                 <groupId>io.fabric8</groupId>
                 <artifactId>kubernetes-client</artifactId>
                 <version>${io.fabric8.kubernetes-client.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.poi</groupId>
+                <artifactId>poi</artifactId>
+                <version>${apache.poi.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.poi</groupId>
+                <artifactId>poi-ooxml</artifactId>
+                <version>${apache.poi.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

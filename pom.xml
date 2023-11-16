@@ -76,7 +76,7 @@
         <log4j2.version>2.21.1</log4j2.version>
         <slf4j.version>2.0.9</slf4j.version>
         <commons-lang3.version>3.13.0</commons-lang3.version>
-        <jackson-databind.version>2.15.3</jackson-databind.version>
+        <jackson-databind.version>2.16.0</jackson-databind.version>
         <freemarker.version>2.3.32</freemarker.version>
         <spring-core.version>6.0.13</spring-core.version>
         <javalib-core.version>2.0.3</javalib-core.version>

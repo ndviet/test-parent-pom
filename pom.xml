@@ -62,7 +62,8 @@
         <robotframework-maven-plugin.version>2.1.0</robotframework-maven-plugin.version>
         <properties-maven-plugin.version>1.2.1</properties-maven-plugin.version>
         <maven-surefire-plugin.version>3.2.2</maven-surefire-plugin.version>
-        <gmaven-plugin.version>1.3</gmaven-plugin.version>
+        <gmavenplus-plugin.version>3.0.2</gmavenplus-plugin.version>
+        <apache.groovy.version>4.0.15</apache.groovy.version>
         <webdriverextensions-maven-plugin.version>3.4.0</webdriverextensions-maven-plugin.version>
         <maven-enforcer-plugin.version>3.4.1</maven-enforcer-plugin.version>
         <webdriverextensions.version>3.11.2</webdriverextensions.version>
@@ -251,6 +252,12 @@
             <version>${maven-release-plugin.version}</version>
             <type>maven-plugin</type>
         </dependency>
+        <dependency>
+            <groupId>org.apache.groovy</groupId>
+            <artifactId>groovy</artifactId>
+            <version>${apache.groovy.version}</version>
+            <scope>runtime</scope>
+        </dependency>
     </dependencies>
 
     <build>
@@ -361,9 +368,9 @@
                 </plugin>
 
                 <plugin>
-                    <groupId>org.codehaus.gmaven</groupId>
-                    <artifactId>gmaven-plugin</artifactId>
-                    <version>${gmaven-plugin.version}</version>
+                    <groupId>org.codehaus.gmavenplus</groupId>
+                    <artifactId>gmavenplus-plugin</artifactId>
+                    <version>${gmavenplus-plugin.version}</version>
                     <executions>
                         <execution>
                             <id>set-timestamp-property</id>
@@ -372,10 +379,15 @@
                                 <goal>execute</goal>
                             </goals>
                             <configuration>
-                                <source>
-                                    def timestamp = new Date().format('yyyyMMDD_HHmmssSSS')
-                                    project.properties.put('custom.timestamp', timestamp)
-                                </source>
+                                <scripts>
+                                    <script>
+                                        import java.text.SimpleDateFormat
+                                        def date = new Date()
+                                        def sdf = new SimpleDateFormat("yyyyMMDD_HHmmssSSS")
+                                        def timestamp = sdf.format(date)
+                                        project.properties.put('custom.timestamp', timestamp)
+                                    </script>
+                                </scripts>
                             </configuration>
                         </execution>
                     </executions>

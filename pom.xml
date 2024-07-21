@@ -55,7 +55,7 @@
         <maven-antrun-plugin.version>3.1.0</maven-antrun-plugin.version>
         <maven-compiler-plugin.version>3.13.0</maven-compiler-plugin.version>
         <maven-source-plugin.version>3.3.1</maven-source-plugin.version>
-        <maven-javadoc-plugin.version>3.7.0</maven-javadoc-plugin.version>
+        <maven-javadoc-plugin.version>3.8.0</maven-javadoc-plugin.version>
         <maven-gpg-plugin.version>3.2.4</maven-gpg-plugin.version>
         <nexus-staging-maven-plugin.version>1.7.0</nexus-staging-maven-plugin.version>
         <maven-release-plugin.version>3.1.0</maven-release-plugin.version>
@@ -84,8 +84,8 @@
         <robotframework.version>4.1.2</robotframework.version>
         <testng.version>7.10.2</testng.version>
         <cucumber-java.version>7.18.1</cucumber-java.version>
-        <cucumber-testng.version>7.18.0</cucumber-testng.version>
-        <cucumber-gherkin.version>7.18.0</cucumber-gherkin.version>
+        <cucumber-testng.version>7.18.1</cucumber-testng.version>
+        <cucumber-gherkin.version>7.18.1</cucumber-gherkin.version>
         <gherkin.version>28.0.0</gherkin.version>
         <rest-assured.version>5.5.0</rest-assured.version>
         <io.fabric8.kubernetes-client.version>6.13.1</io.fabric8.kubernetes-client.version>

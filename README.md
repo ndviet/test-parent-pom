@@ -11,6 +11,7 @@ configurations using inheritance between pom files. It helps in easy maintenance
 3. [test-webdriver-downloader](../../../test-webdriver-downloader)
 4. [test-robot-framework](../../../test-robot-framework)
 5. [test-testng-framework](../../../test-testng-framework)
+6. [test-cucumber-framework](../../../test-cucumber-framework)
 
 ## Usage
 
